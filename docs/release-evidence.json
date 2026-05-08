@@ -1,26 +1,55 @@
 {
-  "product": "aquarium-terrarium-care-game",
-  "tag": "v0.1.0-alpha.1",
-  "status": "pending-release-api-confirmation",
-  "github": {
-    "repository": "Sunmax0731/aquarium-terrarium-care-game",
-    "url": "https://github.com/Sunmax0731/aquarium-terrarium-care-game",
-    "releaseUrl": null,
-    "prerelease": null,
-    "latestCheck": null
-  },
-  "assets": [
-    "dist/aquarium-terrarium-care-game-docs.zip",
-    "docs/manual-test.md",
-    "docs/strict-manual-test-addendum.md"
-  ],
-  "validation": {
-    "npmTest": "pass-before-release",
-    "manualTest": "not-executed-by-codex",
-    "qcdsMinimum": "A-"
-  },
-  "git": {
-    "finalMainOriginStatus": "pending-final-check",
-    "codexBranches": "pending-final-check"
-  }
+    "product":  "aquarium-terrarium-care-game",
+    "tag":  "v0.1.0-alpha.1",
+    "status":  "api-confirmed-after-prerelease",
+    "github":  {
+                   "repository":  "Sunmax0731/aquarium-terrarium-care-game",
+                   "url":  "https://github.com/Sunmax0731/aquarium-terrarium-care-game",
+                   "releaseUrl":  "https://github.com/Sunmax0731/aquarium-terrarium-care-game/releases/tag/v0.1.0-alpha.1",
+                   "apiUrl":  "https://api.github.com/repos/Sunmax0731/aquarium-terrarium-care-game/releases/319274002",
+                   "tagName":  "v0.1.0-alpha.1",
+                   "prerelease":  true,
+                   "latestCheck":  {
+                                       "endpointStatus":  404,
+                                       "targetIsLatest":  false,
+                                       "tagName":  null
+                                   }
+               },
+    "assets":  [
+                   {
+                       "contentType":  "application/zip",
+                       "name":  "aquarium-terrarium-care-game-docs.zip",
+                       "browserDownloadUrl":  "https://github.com/Sunmax0731/aquarium-terrarium-care-game/releases/download/v0.1.0-alpha.1/aquarium-terrarium-care-game-docs.zip",
+                       "state":  "uploaded"
+                   },
+                   {
+                       "contentType":  "application/octet-stream",
+                       "name":  "manual-test.md",
+                       "browserDownloadUrl":  "https://github.com/Sunmax0731/aquarium-terrarium-care-game/releases/download/v0.1.0-alpha.1/manual-test.md",
+                       "state":  "uploaded"
+                   },
+                   {
+                       "contentType":  "application/octet-stream",
+                       "name":  "strict-manual-test-addendum.md",
+                       "browserDownloadUrl":  "https://github.com/Sunmax0731/aquarium-terrarium-care-game/releases/download/v0.1.0-alpha.1/strict-manual-test-addendum.md",
+                       "state":  "uploaded"
+                   }
+               ],
+    "assetCount":  3,
+    "validation":  {
+                       "npmTest":  "pass",
+                       "manualTest":  "not-executed-by-codex",
+                       "qcdsMinimum":  "A-",
+                       "validationResult":  "dist/validation-result.json",
+                       "webSmoke":  "dist/web-smoke-result.json",
+                       "docsZip":  "dist/aquarium-terrarium-care-game-docs.zip"
+                   },
+    "git":  {
+                "evidenceUpdateBranch":  "codex/closed-alpha-release",
+                "mainOriginAtEvidenceUpdate":  {
+                                                   "ahead":  0,
+                                                   "behind":  0
+                                               },
+                "finalBranchCleanup":  "verified-after-evidence-merge"
+            }
 }
