@@ -1,0 +1,13 @@
+{
+  "product": "aquarium-terrarium-care-game",
+  "title": "アクアリウム・テラリウム育成ゲーム",
+  "domain": "Game",
+  "ideaNo": 8,
+  "platformType": "browser-web",
+  "expectedPublicTarget": "GitHub Pages / BOOTH",
+  "browser": {
+    "evidence": "dist/web-smoke-result.json"
+  },
+  "android": null,
+  "evidence": "dist/platform-runtime-gate-result.json"
+}
