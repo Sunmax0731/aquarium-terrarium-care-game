@@ -1,0 +1,87 @@
+{
+  "product": "aquarium-terrarium-care-game",
+  "rank": 69,
+  "scenarios": [
+    {
+      "id": "happy-path",
+      "type": "happy-path",
+      "title": "水質の通常処理",
+      "inputs": {
+        "tankId": "river-terrarium",
+        "waterQuality": "balanced",
+        "speciesNeeds": "shade",
+        "careAction": "trim-and-feed"
+      },
+      "expected": {
+        "status": "pass",
+        "accepted": 1,
+        "warnings": 0
+      }
+    },
+    {
+      "id": "missing-required",
+      "type": "missing-required",
+      "title": "careAction不足時の停止",
+      "inputs": {
+        "tankId": "river-terrarium",
+        "waterQuality": "balanced",
+        "speciesNeeds": "shade",
+        "careAction": ""
+      },
+      "expected": {
+        "status": "error",
+        "accepted": 0,
+        "warnings": 0
+      }
+    },
+    {
+      "id": "warning",
+      "type": "warning",
+      "title": "光量の注意喚起",
+      "inputs": {
+        "tankId": "river-terrarium",
+        "waterQuality": "nitrate-high",
+        "speciesNeeds": "low-stress",
+        "careAction": "large-water-change"
+      },
+      "flags": [
+        "needsReview"
+      ],
+      "expected": {
+        "status": "warning",
+        "accepted": 1,
+        "warnings": 1
+      }
+    },
+    {
+      "id": "mixed-batch",
+      "type": "mixed-batch",
+      "title": "ケア判断を含む混在バッチ",
+      "items": [
+        {
+          "tankId": "river-terrarium",
+          "waterQuality": "balanced",
+          "speciesNeeds": "shade",
+          "careAction": "trim-and-feed"
+        },
+        {
+          "tankId": "river-terrarium",
+          "waterQuality": "balanced",
+          "speciesNeeds": "shade",
+          "careAction": ""
+        },
+        {
+          "tankId": "river-terrarium",
+          "waterQuality": "nitrate-high",
+          "speciesNeeds": "low-stress",
+          "careAction": "large-water-change"
+        }
+      ],
+      "expected": {
+        "status": "warning",
+        "accepted": 2,
+        "warnings": 2
+      }
+    }
+  ]
+}
