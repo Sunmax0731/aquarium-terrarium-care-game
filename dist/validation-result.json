@@ -44,6 +44,7 @@
       }
     ]
   },
+  "platformRuntimeGate": "static Web care game prototype / GitHub Pages",
   "generatedArtifacts": [
     "dist/validation-result.json",
     "dist/web-smoke-result.json",

@@ -1,20 +1,16 @@
 # 要件定義
 
-対象: アクアリウム・テラリウム育成ゲーム (Rank 69, Game No.8)
+## 対象
+
+| 69 | P3 | 48 | Game | 8 | アクアリウム・テラリウム育成ゲーム | aquarium-terrarium-care-game | GitHub Pages / BOOTH | 育成シミュレーションは長期バランスとコンテンツ量が必要で、初期実装だけでは完成度を判断しにくい。 |
 
 ## 目的
 
-水槽とテラリウムの水質、光、温度、生体相性を日々のケアで整える。
+水質、種、ケア行動を選び、短い育成結果を確認できるブラウザ育成ゲーム検証。
 
-## 課題
+## 必須要件
 
-育成シミュレーションは魅力があるが、長期バランスとコンテンツ量が必要。
-
-## 要件
-
-- 必須入力 `tankId`、`waterQuality`、`speciesNeeds`、`careAction` を検証する。
-- happy-path / missing-required / warning / mixed-batch を代表シナリオとして保持する。
-- CLI、静的Web UI、自動テスト、docs ZIP、release evidence を同一repoで完結させる。
-- 正式docsはNON PICKUP行、ZIP metadata、ドメインdocsを根拠に正常な日本語で再構成する。
-
-静的Webまたはローカルサーバーで確認できる browser game として、非blank表示、主要要素、主要操作を検証します。
+- 代表シナリオ4種を自動検証する。
+- GitHub Pagesまたはローカルサーバーで起動できる静的Webゲームとして、非blank表示と主要操作を必須とする。
+- 文字化けを検出し、正式成果物へ残さない。
+- QCDSの10段階スケールを機械検証する。

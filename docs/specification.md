@@ -1,17 +1,17 @@
 # 仕様
 
-対象: アクアリウム・テラリウム育成ゲーム (Rank 69, Game No.8)
+- 名称: アクアリウム・テラリウム育成ゲーム
+- Repo: aquarium-terrarium-care-game
+- Closed alpha platform: static Web care game prototype / GitHub Pages
+- 主な公開先: GitHub Pages / BOOTH
 
-| 入力 | 用途 |
-| tankId | アクアリウム・テラリウム育成ゲーム の評価、表示、レポートに必要 |
-| waterQuality | アクアリウム・テラリウム育成ゲーム の評価、表示、レポートに必要 |
-| speciesNeeds | アクアリウム・テラリウム育成ゲーム の評価、表示、レポートに必要 |
-| careAction | アクアリウム・テラリウム育成ゲーム の評価、表示、レポートに必要 |
+## 入力
 
-## 出力
+- `tankState`
+- `speciesPlan`
+- `careAction`
+- `waterQuality`
 
-- `dist/validation-result.json`
-- `dist/web-smoke-result.json`
-- `docs/qcds-strict-metrics.json`
-- `docs/qcds-regression-baseline.json`
-- `dist/aquarium-terrarium-care-game-docs.zip`
+## 主要機能
+
+代表シナリオ評価、Web表示、CLI評価、docs / QCDS / release evidence 生成。

@@ -5,12 +5,12 @@
     {
       "id": "happy-path",
       "type": "happy-path",
-      "title": "水質の通常処理",
+      "title": "アクアリウム・テラリウム育成ゲームの通常フロー",
       "inputs": {
-        "tankId": "river-terrarium",
-        "waterQuality": "balanced",
-        "speciesNeeds": "shade",
-        "careAction": "trim-and-feed"
+        "tankState": "stable",
+        "speciesPlan": "shrimp-moss",
+        "careAction": "feed-small",
+        "waterQuality": "good"
       },
       "expected": {
         "status": "pass",
@@ -21,12 +21,12 @@
     {
       "id": "missing-required",
       "type": "missing-required",
-      "title": "careAction不足時の停止",
+      "title": "tankState不足時の停止",
       "inputs": {
-        "tankId": "river-terrarium",
-        "waterQuality": "balanced",
-        "speciesNeeds": "shade",
-        "careAction": ""
+        "tankState": "stable",
+        "speciesPlan": "",
+        "careAction": "feed-small",
+        "waterQuality": "good"
       },
       "expected": {
         "status": "error",
@@ -37,12 +37,12 @@
     {
       "id": "warning",
       "type": "warning",
-      "title": "光量の注意喚起",
+      "title": "水質悪化時のケア警告",
       "inputs": {
-        "tankId": "river-terrarium",
-        "waterQuality": "nitrate-high",
-        "speciesNeeds": "low-stress",
-        "careAction": "large-water-change"
+        "tankState": "crowded",
+        "speciesPlan": "mixed",
+        "careAction": "large-water-change",
+        "waterQuality": "low"
       },
       "flags": [
         "needsReview"
@@ -56,25 +56,25 @@
     {
       "id": "mixed-batch",
       "type": "mixed-batch",
-      "title": "ケア判断を含む混在バッチ",
+      "title": "正常・不足・警告を含む混在バッチ",
       "items": [
         {
-          "tankId": "river-terrarium",
-          "waterQuality": "balanced",
-          "speciesNeeds": "shade",
-          "careAction": "trim-and-feed"
+          "tankState": "stable",
+          "speciesPlan": "shrimp-moss",
+          "careAction": "feed-small",
+          "waterQuality": "good"
         },
         {
-          "tankId": "river-terrarium",
-          "waterQuality": "balanced",
-          "speciesNeeds": "shade",
-          "careAction": ""
+          "tankState": "stable",
+          "speciesPlan": "",
+          "careAction": "feed-small",
+          "waterQuality": "good"
         },
         {
-          "tankId": "river-terrarium",
-          "waterQuality": "nitrate-high",
-          "speciesNeeds": "low-stress",
-          "careAction": "large-water-change"
+          "tankState": "crowded",
+          "speciesPlan": "mixed",
+          "careAction": "large-water-change",
+          "waterQuality": "low"
         }
       ],
       "expected": {
