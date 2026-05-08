@@ -1,0 +1,18 @@
+{
+  "product": "aquarium-terrarium-care-game",
+  "baselineVersion": "v0.1.0-alpha.1",
+  "representativeScenarios": [
+    "happy-path",
+    "missing-required",
+    "warning",
+    "mixed-batch"
+  ],
+  "expectedValidationResult": "pass",
+  "expectedWebSmokeResult": "pass",
+  "manualTestStatus": "not-executed",
+  "releaseAssetContract": [
+    "dist/aquarium-terrarium-care-game-docs.zip",
+    "docs/manual-test.md",
+    "docs/strict-manual-test-addendum.md"
+  ]
+}
